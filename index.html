@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sublime Slider</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/slider.css">
+<link href="css/cssanimation.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+	<div class="slider">
+		<div class="item active" data-delay="2000">
+				<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=1ST&w=500&h=300" class="" data-start-animation="doorOpenFromRight 1s ease-in 0s 1 normal forwards">
+				<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=START&w=200&h=200" class="" data-start-animation="bounceInTop 1s ease-in-out 500ms 1 normal both,heartbeat 1s linear 1500ms infinite">
+				<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=1ST&w=500&h=300" class="" data-start-animation="doorOpenFromLeft 1s ease-in 0s 1 normal forwards">
+		</div>
+		<div class="item">
+				  <img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=2nd&w=600&h=300" class="cssanimation electricity">
+		</div>
+		<div class="item">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=3rd&w=600&h=300"  class="cssanimation heartbeat">
+		</div>
+		<div class="item">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=4th&w=600&h=300"  class="cssanimation doorCloseFromLeft">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=4th&w=600&h=300"  class="cssanimation doorCloseFromRight">
+		</div>
+		<ol class="slider-indicators" style="z-index:1 !important">
+		<li  class="" data-slide="1"></li>
+		<li   class="" data-slide="2"></li>
+		<li   data-slide="3"></li>
+		<li  class="" data-slide="4"></li>
+		</ol>
+		<a class="left slider-control" data-slide="prev">
+		<i class="fa fa-arrow-left icon-prev" aria-hidden="true"></i>
+	  </a>
+	  <a class="right slider-control"  data-slide="next">
+		<i class="fa fa-arrow-right icon-next" aria-hidden="true"></i>
+
+	  </a>
+	</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/slider.js"></script>
+	<script>
+	$('.slider').sublime_slider({
+			interval: 2000,
+			autoplay:false
+		});
+	</script>
+</body>
+</html>
