@@ -22,7 +22,7 @@
 		settings.mouse ? $me.mouse_action() : "";
 		$("[data-slide]").click(function() {
 			var $action = $(this).attr("data-slide");
-			clearTimeout(autoplay);
+			//clearTimeout(autoplay);
 			$me.slide({
 				go: $action,
 				autoplay: settings.autoplay
@@ -48,8 +48,7 @@
 		$you = $("[data-sequence='" + $next + "']");
 		$my.removeAttr('data-active');
 		$you.attr('data-active', 1);
-		$my.hide();
-		$you.show();
+
 		$(".slider-indicators").find("[data-slide='" + current + "']").removeClass(
 			"active");
 		$(".slider-indicators").find("[data-slide='" + $next + "']").addClass(
@@ -62,6 +61,15 @@
 					go: "next"
 				});
 			}
+			if ($my.attr('data-out-animation')) {
+				$my.css("animation", $my.attr('data-out-animation'));
+				$my.one(
+					'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+					$my.hide());
+			} else {
+				$my.hide();
+			}
+			$you.show();
 		}, delay);
 	}
 	$.fn.sublime = function() {
@@ -69,7 +77,7 @@
 		$all.each(function() {
 			$that = $(this);
 			var animation = $that.attr("data-start-animation");
-			console.log(animation);
+			//	console.log(animation);
 			$that.css("animation", animation);
 		});
 	}

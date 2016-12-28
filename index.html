@@ -12,9 +12,9 @@
 </head>
 <body>
 	<div class="slider">
-		<div class="item active" data-delay="2000">
+		<div class="item active" data-delay="2000" data-out-animation="bounceInTop 500ms ease-in-out 500ms 1 normal both">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=1ST&w=500&h=300" class="" data-start-animation="doorOpenFromRight 1s ease-in 0s 1 normal forwards">
-				<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=START&w=200&h=200" class="" data-start-animation="bounceInTop 1s ease-in-out 500ms 1 normal both,heartbeat 1s linear 1500ms infinite" data-out-animation="bounceInTop 1s ease-in-out 500ms 1 normal both">
+				<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=START&w=200&h=200" class="" data-start-animation="bounceInTop 1s ease-in-out 500ms 1 normal both,heartbeat 1s linear 1500ms infinite">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=76&txt=1ST&w=500&h=300" class="" data-start-animation="doorOpenFromLeft 1s ease-in 0s 1 normal forwards">
 		</div>
 		<div class="item">
@@ -41,12 +41,12 @@
 
 	  </a>
 	</div>
-		<script src="js/jquery.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="js/slider.js"></script>
 	<script>
 	$('.slider').sublime_slider({
-			interval: 2000,
-			autoplay:false
+			interval: 1000,
+			autoplay:true
 		});
 	</script>
 </body>
